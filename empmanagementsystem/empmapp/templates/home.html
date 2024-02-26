@@ -1,0 +1,83 @@
+{% extends 'Abase.html' %}
+
+{% block content %}
+
+{%load static %}
+
+<div class="maincontainer">
+    <div class="image-conatiner">
+        <div class="left-container">
+            <h1 class="image-main-heading">Payroll Management</h1>
+            <span class="image-subheading">Manage Employee Payroll</span>
+            <button type="submit" id="getStartedBtn">Get Started >></button>
+        </div>
+        <div class="right-container">
+            <img src="{% static 'images/emp.jpg' %}" class="image" alt="">
+        </div>
+    </div>
+    <div class="features-container">
+
+        <div class="card1" id="EmployeCard">
+            <div class="feature-heading-container">
+                <div class="icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                <h1 class="feature-heading">Employee Management</h1>
+            </div>
+            <hr>
+            <div class="content-container">
+                <p class="card-content">Our cutting-edge employee management system empowers organizations to
+                    effortlessly handle tasks such as attendance tracking, leave management, and performance
+                    evaluations, ensuring streamlined operations.</p>
+            </div>
+        </div>
+
+
+        <div class="card1" id="Departmentcard">
+            <div class="feature-heading-container">
+                <div class="icon"><i class="fa-solid fa-house"></i></div>
+                <h1 class="feature-heading">Department Management</h1>
+            </div>
+            <hr>
+            <div class="content-container">
+                <p class="card-content">Revolutionize departmental efficiency with our advanced department management
+                    system. Seamlessly organize tasks, allocate resources, and monitor progress to achieve optimal
+                    workflow.</p>
+            </div>
+        </div>
+
+
+        <div class="card1" id="Attendancecard">
+            <div class="feature-heading-container">
+                <div class="icon"><i class="fa-solid fa-clipboard-user"></i></div>
+                <h1 class="feature-heading">Attendance Management</h1>
+            </div>
+            <hr>
+            <div class="content-container">
+                <p class="card-content">Invest in a robust attendance management system that not only saves time but
+                    also fosters a culture of punctuality, ultimately contributing to a more efficient and organized
+                    workplace.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    document.getElementById("EmployeCard").addEventListener('click',function(){
+        window.location.href = "/add/employedetails/";
+    });
+
+    document.getElementById("Departmentcard").addEventListener('click',function(){
+        window.location.href = "/add_dept/department_details/";
+    });
+
+    document.getElementById("Attendancecard").addEventListener('click',function(){
+        window.location.href = "/attendence_details/";
+    });
+</script>
+
+
+
+
+
+<script src="https://kit.fontawesome.com/b6bcfadf24.js" crossorigin="anonymous"></script>
+{% endblock %}
